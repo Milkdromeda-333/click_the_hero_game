@@ -16,13 +16,16 @@ startBtn.addEventListener("click", () => {
         let paragraph = document.createElement("p");
         if (counter === 1) {
             paragraph.innerHTML = `You clicked ${counter} time!`;
+        }
+        if (counter >= 100) {
+            paragraph.innerHTML = `You clicked ${counter} times! You won!! `;
         } else {
             paragraph.innerHTML = `You clicked ${counter} times!`;
         }
 
         results.append(paragraph);
         counter = 0;
-    }, 3000);
+    }, 10000);
     clicker.addEventListener("click", () => {
         counter++;
     });
