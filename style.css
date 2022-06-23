@@ -1,0 +1,25 @@
+:root {
+    --pink: rgb(255, 122, 229);
+    --green: rgb(122, 255, 148);
+    --blue: rgb(122, 229, 255);
+    --font: 'Coming Soon', cursive;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font);
+    font-size: 25px;
+    background-color: var(--pink);
+    color: white;
+}
+
+img {
+    width: 20%;
+}
+
+.results {
+    font-size: 50px;
+    color: black;
+}
