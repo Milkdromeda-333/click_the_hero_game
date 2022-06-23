@@ -6,22 +6,25 @@
 
 const clicker = document.getElementById("clicker");
 const startBtn = document.getElementById("startBtn");
+let results = document.getElementsByTagName("footer")[0];
 
 let counter = 0;
 
 startBtn.addEventListener("click", () => {
+    results.removeChild(results.lastChild);
     setTimeout(() => {
-        console.log("works");
         let paragraph = document.createElement("p");
-        paragraph.remove();
-        paragraph.innerHTML = `You clicked ${counter} amount of times!`;
-        let results = document.getElementsByClassName("results")[0];
+        if (counter === 1) {
+            paragraph.innerHTML = `You clicked ${counter} time!`;
+        } else {
+            paragraph.innerHTML = `You clicked ${counter} times!`;
+        }
+
         results.append(paragraph);
         counter = 0;
     }, 3000);
     clicker.addEventListener("click", () => {
         counter++;
-        console.log("You clicked");
     });
 });
 
